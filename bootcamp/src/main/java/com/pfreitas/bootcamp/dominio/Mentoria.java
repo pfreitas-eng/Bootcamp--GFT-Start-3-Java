@@ -4,11 +4,9 @@ import java.time.LocalDate;
 
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 @Getter
 @Setter
-@ToString
 public class Mentoria extends Conteudo {
     
     private LocalDate data;
@@ -23,4 +21,8 @@ public class Mentoria extends Conteudo {
         return XP_PADRAO + 20d;
     }
 
+    @Override
+    public String toString() {
+        return String.format("Mentoria{titulo='%s', descricao='%s', data='%s'}", this.getTitulo(), this.getDescricao(), this.getData());
+    }
 }

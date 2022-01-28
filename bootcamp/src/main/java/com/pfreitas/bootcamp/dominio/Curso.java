@@ -2,11 +2,9 @@ package com.pfreitas.bootcamp.dominio;
 
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 @Getter
 @Setter
-@ToString
 public class Curso extends Conteudo {
     
     private int cargaHoraria;
@@ -19,6 +17,11 @@ public class Curso extends Conteudo {
     @Override
     public double calcularXp() {
         return XP_PADRAO * this.cargaHoraria;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Curso{titulo='%s', descricao='%s', cargaHoraria='%d'}", this.getTitulo(), this.getDescricao(), this.getCargaHoraria());
     }
 
 }
