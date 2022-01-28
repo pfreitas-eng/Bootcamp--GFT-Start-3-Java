@@ -1,9 +1,14 @@
 package com.pfreitas.bootcamp.dominio;
 
+import lombok.Data;
+import lombok.ToString;
+
+@Data
+@ToString()
 public class Curso {
     
-    String titulo;
-    String descricao;
-    int cargaHoraria;
+    private String titulo;
+    private String descricao;
+    private int cargaHoraria;
 
 }
